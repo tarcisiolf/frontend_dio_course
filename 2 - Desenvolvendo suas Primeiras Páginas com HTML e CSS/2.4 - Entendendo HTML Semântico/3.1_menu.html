@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="menu">
+        <li><a class="menuItem" href="#">Home</a></li>
+        <li><a class="menuItem" href="#">Profile</a></li>
+        <li><a class="menuItem" href="#">About</a></li>
+        <li><a class="menuItem" href="#">Contacts</a></li>
+    </ul>
+
+    <button class="hamburger" aria-expanded="false">
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons" style="display:none" aria-hidden="true">close</i>
+    </button>
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll("menuItem");
+        const hamburguer = document.querySelector(".hamburguer");
+        const closeIcon = document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+        
+        function toggleMenu(){
+            if(menu.classList.contains("showMenu")){
+                menu.classList.remove("showMenu");
+                closeIcon.style.display = "none";
+                menuIcon.style.display = "none";
+            } else {
+                menu.classList.add("showMenu");
+                closeIcon.style.display = "block";
+                menuIcon.style.display = "none";
+                hamburger.setAttribute("aria-expanded", true);	
+            }
+        }
+
+        hamburguer.addEventListener("click", toggleMenu);
+
+        menuItems.forEach(
+            function (menuItem){
+            menuItem.addEventListener("click", toggleMenu);
+            }   
+        )
+    </script>
+</body>
+</html>
