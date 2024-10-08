@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <form onsubmit="" method="get">
+        <label>Nome: </label><input type="text" name="name"/> <br/>
+        <label>Cargo: </label>
+        <select name="role">
+            <option value="">Selecione o cargo</option>
+            <option selected value="admin">Administrador</option>
+            <option value="developer">Desenvolvedor</option>
+            <option value="manager">Gerente</option>
+            <option value="project_manager">Gerente de Projeto</option>
+            <option value="quality_assurance">Analista de Qualidade</option>
+            <option value="user_experience">UX/UI Designer</option>
+            <option value="other">Outro</option>
+        </select>
+        <br/>
+        <label>Assunto: </label><input type="text" name="subject"/> <br/>
+        <button type="submit"> Enviar </button>
+    </form>
+</body>
+</html>
