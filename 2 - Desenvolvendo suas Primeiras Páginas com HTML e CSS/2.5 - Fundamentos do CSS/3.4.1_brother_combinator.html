@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha CSS</title>
+    <style>
+        /*
+            Combinadores: qual op tipo de relação entre 2 seletores
+            1. Combinador descendente (espaço)
+            2. Combinador filho (>)
+            3. Combinador irmão adjacnete (+)
+            4. Combinador irmão em geral (~)
+
+            [SELETOR] [COMBINADOR] [SELETOR]
+        */
+
+        /*
+        + - PRÓXIMO IRMÃO DA TAG
+        div + p {
+            color: tomato;
+        }
+
+        .fundo-verde + p{
+            background: lightgreen;
+        }
+        */
+
+        /*
+        ~ - IRMÃO EM GERAL DA TAG
+        */
+        div ~ p {
+            color: tomato;
+        }
+
+        .fundo-verde ~ p{
+            background: lightgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fundo-verde">
+        <p>Parágrafo 1 dentro da div</p>
+        <p>Parágrafo 2 dentro da div</p>
+        <span>
+            <p>Parágrafo 3 dentro da div e dentro do span</p>
+        </span>
+    </div>
+
+    <p>Parágrafo 4 fora da div</p>
+    <p>Parágrafo 5 fora da div</p>
+
+    <div class="fundo-verde">
+        <p>Parágrafo 6 dentro da div</p>
+        <p>Parágrafo 7 dentro da div</p>
+        <span>
+            <p>Parágrafo 8 dentro da div e dentro do span</p>
+        </span>
+    </div>
+
+    <p>Parágrafo 9 fora da div</p>
+    <p>Parágrafo 10 fora da div</p>
+
+    <div class="fundo-azul">
+        <p>Parágrafo 11 dentro da div</p>
+        <p>Parágrafo 12 dentro da div</p>
+        <span>
+            <p>Parágrafo 13 dentro da div e dentro do span</p>
+        </span>
+    </div>
+
+    <p>Parágrafo 14 fora da div</p>
+    <p>Parágrafo 15 fora da div</p>
+</body>
+</html>
