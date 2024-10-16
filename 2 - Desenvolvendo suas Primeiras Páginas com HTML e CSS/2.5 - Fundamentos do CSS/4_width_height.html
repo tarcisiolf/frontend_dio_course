@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha CSS</title>
+
+    <style>
+        /*
+        * Propriedades básicas do CSS
+        * width: Largura
+        * height : Algura
+        */
+        div {
+            background: lightblue;
+            width: 200px;
+            height: 100px;
+        }
+
+        button{
+            background: tomato;
+            width: initial;
+            height: auto;
+        }
+
+        #div-01{
+            background: lightblue;
+            width: 200px;
+            height: 200px;
+        }
+
+        #div-02{
+            background: lightgreen;
+            height: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div>Trilha CSS</div>
+    <button>Texto de teste</button>
+
+    <div id="div-01">
+        div 01
+        <div id="div-02">
+            div 02
+        </div>
+    </div>
+</body>
+</html>
